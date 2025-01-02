@@ -1,11 +1,13 @@
 <script setup>
-import { useRouter } from 'vue-router';
-import { onMounted } from 'vue';
-
-const router = useRouter();
+import { navigateTo } from 'nuxt/app';
 
 onMounted(() => {
-  router.push('/login');
+  navigateTo('/login');
 });
 </script>
 
+<template>
+  <client-only>
+    <!-- You can display a loading message or skeleton here if needed -->
+  </client-only>
+</template>
