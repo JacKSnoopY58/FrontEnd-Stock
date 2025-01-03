@@ -128,7 +128,7 @@ export default {
     async fetchProductTypes() {
       try {
         const response = await axios.get(
-          "https://project-stock.onrender.com/api/products/get/producttype",
+          "http://erpstock.servehttp.com:9090/api/products/get/producttype",
           {
             headers: {
               Authorization: `Bearer ${this.token}`,
@@ -153,7 +153,7 @@ export default {
 
       try {
         const { data } = await axios.post(
-          "https://project-stock.onrender.com/api/products/addtype",
+          "http://erpstock.servehttp.com:9090/api/products/addtype",
           {
             headers: {
               Authorization: `Bearer ${this.token}`,
@@ -187,7 +187,7 @@ export default {
         console.log(formData);
         console.log(this.postdata);
         const response = await axios.post(
-          "https://project-stock.onrender.com/api/products/add",
+          "http://erpstock.servehttp.com:9090/api/products/add",
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },

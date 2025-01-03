@@ -150,7 +150,7 @@ export default {
     async fetchProducts() {
       try {
         const response = await axios.post(
-          "https://project-stock.onrender.com/api/products/products",
+          "http://erpstock.servehttp.com:9090/api/products/products",
           {
             page: 0,
             perpage: 10,
@@ -191,7 +191,7 @@ export default {
 
       try {
         const response = await axios.post(
-          "https://project-stock.onrender.com/api/products/genbarcode",
+          "http://erpstock.servehttp.com:9090/api/products/genbarcode",
           {
             products: productsToGenerate,
             isQr: false, 

@@ -42,7 +42,7 @@
             <img
               :src="
                 product.productPicture
-                  ? 'https://project-stock.onrender.com/images/' +
+                  ? 'http://erpstock.servehttp.com:9090/images/' +
                     product.productPicture
                   : 'https://lh3.googleusercontent.com/proxy/vfrcI3Ho8V8lLS1FWlXFKUAc9p85CQm9WxsUFwOm1zrLrYsStycX5NSOBJS4TYEEX5_3mQkd8QuqnIk'
               "
@@ -121,7 +121,7 @@ export default {
       try {
         // console.log("Filters being sent to API:", this.filters);
         const response = await axios.post(
-          "https://project-stock.onrender.com/api/products/products",
+          "http://erpstock.servehttp.com:9090/api/products/products",
           this.filters
         );
         this.products = response.data.data;
@@ -133,7 +133,7 @@ export default {
     async fetchProductTypes() {
       try {
         const response = await axios.get(
-          "https://project-stock.onrender.com/api/products/get/producttype"
+          "http://erpstock.servehttp.com:9090/api/products/get/producttype"
         );
         this.productType = response.data.data;
       } catch (error) {
